@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Responsive Gallery </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: grey;
+                color: ivory;
+                font-size: calc(12px + (19 - 12) * ((100vw - 320px) / (1600 - 320)));
+                }
+            .main-container {
+                max-width: 960px;
+                width: 90%;
+                margin: 0 auto;
+
+             /* Main Layout - Grid */
+                }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+                grid-gap: 5vh;
+
+            }         
+   
+            .tile {
+                height: 144px;
+                background-image: linear-gradient( to top, white 20%, lightskyblue 20% );
+                border-radius: 10%;
+
+                }
+            
+            
+            @media screen and (max-width: 319px) {
+            .main-container {
+            font-size: 12px;
+                }
+                }
+
+            @media screen and (min-width: 1600px) {
+            .main-container {
+            font-size: 19px;
+                }
+                }
+
+             /* Gallery Layout - Flex */
+             
+            .container > .tile {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                }
+            img {
+                width: 25vh;
+                max-width: 100%;
+                position: absolute;
+                margin-bottom: 3vh;
+
+                }
+            span {
+                color: black;
+                padding: 2px;
+                position: absolute;
+                align-self: flex-end;
+                margin-bottom: 0.5vh;
+
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <header>
+                <h1>Gallery Heading</h1>
+            </header>
+            <div class="container">
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+                <div class="tile">
+                    <img src="placeholder-image.png" alt="">
+                    <span>Image Title</span>
+                </div>
+            </div> <!--container ends here-->
+            <div id="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id vestibulum ligula. Phasellus pretium molestie luctus.
+                    Morbi commodo nisi eleifend facilisis eleifend. In hac habitasse platea dictumst. Sed sit amet sapien tortor. Etiam et 
+                    iaculis dolor. Mauris nunc orci, vehicula nec sapien eget, rutrum molestie elit. Fusce a porta lacus, eu dictum risus. 
+                    Ut semper pretium turpis, in ultrices enim pretium ac. Aliquam sit amet diam consequat, volutpat eros at, vestibulum metus. 
+                    Phasellus a justo et velit accumsan vulputate sed nec neque. Proin est nisl, luctus venenatis libero vitae, ullamcorper 
+                    egestas mi. Duis hendrerit posuere magna a rutrum. Quisque interdum sit amet nulla vitae vehicula. Etiam dolor dolor, 
+                    dapibus nec dolor quis, euismod efficitur nisi.</p>
+            </div>
+        </div> <!--main-container ends here-->
+
+    </body>
+</html>
+
+
